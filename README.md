@@ -34,3 +34,10 @@ Things you may want to cover:
 ### Association
 - belongs_to :group
 - belongs_to :user
+
+### Column Options
+|user_id|group_id|
+|-------|--------|
+|null: false, foreign_key: true|null: false, foreign_key: true|
+
+
