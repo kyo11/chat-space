@@ -35,6 +35,15 @@ Things you may want to cover:
 - belongs_to :group
 - belongs_to :user
 
+### Column
+- user_id
+- group_id
+
+### Column type
+|user_id|group_id|
+|-------|--------|
+|integer|integer|
+
 ### Column Options
 |user_id|group_id|
 |-------|--------|
