@@ -44,19 +44,9 @@ Things you may want to cover:
 |name|string|null: false|
 
 ### Association
-- has_many :groups
-- has_many :through
-
-
-## groups_usersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to :groups
-- belongs_to :userss
+- has_many :groups, through: :groups_users
+- has_many :groups_users
+- has_many :messages
 
 
 ## groupsテーブル
@@ -65,8 +55,9 @@ Things you may want to cover:
 |title|text|null: false|
 
 ### Association
-- has_many :users
-- has_many :through
+- has_many :users, through: :groups_users
+- has_many :groups_users
+- has_many :messages
 
 
 ## messagesテーブル
