@@ -1,21 +1,21 @@
 .side-bar
   .side-bar__user-name
-    .side-bar__box
-      %h3.side-bar__top-items
+    .side-bar__user-name__box
+      %h3.side-bar__user-name__box__top-items
         = current_user.name
       %ul.top-items__icons 
-        %li.top-items__edt 
+        %li.top-items__icons__edt 
           = link_to '#' do
             = icon('far', 'edit') 
-        %li.top-items__cog
+        %li.top-items__icons__cog
           = link_to edit_user_path(current_user) do
             = icon('fas', 'cog')    
   .side-bar__group-list 
     - current_user.groups.each do |group|
-      .side-bar__group-box
+      .side-bar__group-list__group-box
         = link_to group_messages_path(group) do
-          .side-bar__messege-box
+          .side-bar__group-list__group-box__messege-box
             = group.name
-          .side-bar__mess
+          .side-bar__group-list__group-box__mess
             = group.show_last_message
           
