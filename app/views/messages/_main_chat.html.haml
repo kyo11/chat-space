@@ -1,25 +1,26 @@
 .chat-main
   .chat-main__group-info
     .group-infot
-      .chat-main__groupitira
+      .chat-main__group-info__groupitira
         = @group.name
-      .chat-main__mememe
+      .chat-main__group-info__mememe
         Member:
         - @group.users.each do |user|
           = user.name
-    .chat-main__editttt  
+    .chat-main__group-info__editttt  
       = link_to edit_group_path(@group.id), class: "edit-btn" do
         Edit
-  .message-list
+  -# .message-list
+  -#   .message-list__messagelliki
+  -#     .message-list__messageiki masa
+  -#     .message-list__messaged 2019/11/20(Wed) 17:43:01
+  -#   .message-list__messoha おはよう
+  -#   .message-list__messagelliki2
+  -#     .message-list__messageiki2 masa
+  -#     .message-list__messaged2 2019/11/20(Wed) 17:43:34
+  -#   .message-list__messoha2 今日は夜から雨
+  .message
     = render @messages
-    .message-list__messagelliki
-      .message-list__messageiki masa
-      .message-list__messaged 2019/11/20(Wed) 17:43:01
-    .message-list__messoha おはよう
-    .message-list__messagelliki2
-      .message-list__messageiki2 masa
-      .message-list__messaged2 2019/11/20(Wed) 17:43:34
-    .message-list__messoha2 今日は夜から雨
   .message-form
     = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
       .form__contents
