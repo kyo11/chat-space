@@ -54,7 +54,6 @@ $(function(){
     })
     .done(function(data){
       let html = buildHTML(data);
-      // console.log(html)
       $('.message').append(html);      
       $('form')[0].reset();
       $('.message').animate({ scrollTop: $('.message')[0].scrollHeight});
