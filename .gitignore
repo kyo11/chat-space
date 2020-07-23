@@ -31,3 +31,6 @@ yarn-debug.log*
 .yarn-integrity
 
 public/uploads/*
+
+/public/.DS_Store
+app/views/.DS_Store
